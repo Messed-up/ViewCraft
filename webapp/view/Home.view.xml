@@ -1,0 +1,17 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data" xmlns:viz="sap.viz.ui5.controls"
+	xmlns:mc="sap.suite.ui.microchart" controllerName="com.vodafone.MyProject.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml">
+	<FlexBox id="HistbannerBox" height="8px" alignItems="Center" justifyContent="Center" class="BannerBox">
+		<items>
+			<Title id="banner" textAlign="Center" text="Dashboard"/>
+		</items>
+	</FlexBox>
+	<!--</FlexBox>-->
+	<!--		<items>-->
+	<!--			<Title id="banner" textAlign="Center" text="Dashboard"/>-->
+	<!--		</items>-->
+	<!--	</FlexBox>-->
+	<!--	<items>-->
+	<!--		<Title id="banner" textAlign="Center" text="Activity Logs"/>-->
+	<!--	</items>-->
+</mvc:View>

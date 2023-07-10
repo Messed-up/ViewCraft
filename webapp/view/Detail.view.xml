@@ -1,0 +1,144 @@
+<mvc:View	xmlns:core="sap.ui.core" 
+			xmlns:mvc="sap.ui.core.mvc" 
+			xmlns="sap.m" 
+			xmlns:tnt="sap.tnt"
+			xmlns:u="sap.ui.unified"
+			xmlns:ui="sap.ui.table"
+			controllerName="com.vodafone.MyProject.controller.Detail" 
+			xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<FlexBox id="HistbannerBox" height="8px" alignItems="Center" justifyContent="Center" class="BannerBox">
+		<items>
+			<Title id="banner" textAlign="Center" text="My Products"/>
+		</items>
+	</FlexBox>
+	<!--<Page title = "Hello">-->
+	<!--<content>-->
+	<Panel id="allcatalougepanel" width="auto" class="catalogue">
+		<IconTabBar id="idIconTab" select="handleIconTabBarSelect" expandable="false" class="iconTabBar">
+			<items>
+				<IconTabFilter id="allCatalogues_tab" text="Products" key="keyproducts">
+					<tnt:ToolHeader>
+						<Button icon="sap-icon://clear-filter" id="isFilter" visible="false" press="clearFilter">
+							<layoutData>
+								<OverflowToolbarLayoutData priority="NeverOverflow"/>
+							</layoutData>
+						</Button>
+					</tnt:ToolHeader>
+					<Table id="productDetails" items="{path:'oModel>/'}" itemPress="itemDetails">
+						<headerToolbar>
+							<OverflowToolbar>
+								<!--<Title text="Products" level="H2"/>-->
+								<SearchField id="Search" press="onSearchDetails" width="50%" liveChange="onSuggest"/>
+								<ToolbarSpacer/>
+								<Button press="onSortDialog" icon="sap-icon://sort"/>
+								<Button press="onFilterDialog" icon="sap-icon://filter"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column>
+								<Text text="Product ID"/>
+							</Column>
+							<Column>
+								<Text text="Product Name"/>
+							</Column>
+							<Column>
+								<Text text="Category ID"/>
+							</Column>
+							<Column>
+								<Text text="Units in Stock"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Navigation">
+								<cells>
+									<Text text="{oModel>ProductID}"/>
+									<Text text="{oModel>ProductName}"/>
+									<Text text="{oModel>CategoryID}"/>
+									<Text text="{oModel>UnitsInStock}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Toolbar>
+						<!--<OverflowToolbar>-->
+						<!--<Title text="Products" level="H2"/>-->
+						<ToolbarSpacer/>
+						<Button press="tableFirst" icon="sap-icon://close-command-field"/>
+						<Button press="tablePrev" icon="sap-icon://navigation-left-arrow"/>
+						<Button press="tableNext" icon="sap-icon://navigation-right-arrow"/>
+						<Button press="LableLast" icon="sap-icon://open-command-field"/>
+						<!--</OverflowToolbar>-->
+					</Toolbar>
+				</IconTabFilter>
+				<IconTabFilter id="tableMaintenance_tab" text="My Products" key="keyExcelData">
+					<Bar>
+							<!--<contentMiddle>-->
+							<!--	<Label text="Press Upload button to upload the Excel file -->
+							<!--</contentMiddle>-->
+							<contentRight>
+								<Button id = "LoadTable" icon = "sap-icon://expand-all" press = "onUploadTable" />
+							<!--	<u:FileUploader id="FileUploaderId" sameFilenameAllowed="true" iconOnly="false" buttonOnly="true" fileType="XLSX,xlsx"-->
+							<!--		icon="sap-icon://upload" iconFirst="true" style="Emphasized" change="onUpload"/>-->
+							</contentRight>
+						</Bar>
+					<ui:Table id="excelTable">
+			<ui:extension>
+				<!--<OverflowToolbar style="Clear">-->
+				<!--	<ToolbarSpacer/>-->
+				<!--	<Button icon="sap-icon://add" tooltip="Press to view the data" press="addColumns"/>-->
+				<!--</OverflowToolbar>-->
+			</ui:extension>
+		</ui:Table>
+					<!--<Table id="excelData">-->
+						<!--<headerToolbar>-->
+						<!--	<OverflowToolbar>-->
+						<!--		<Title text="Products" level="H2"/>-->
+						<!--<SearchField id="Search" press="onSearchDetails" width="50%" liveChange="onSuggest"/>-->
+						<!--		<ToolbarSpacer/>-->
+						<!--		<Button press="onPressExcel" icon="sap-icon://expand-all"/>-->
+						<!--<Button press="onFilterDialog" icon="sap-icon://filter"/>-->
+						<!--	</OverflowToolbar>-->
+						<!--</headerToolbar>-->
+						<!--<columns>-->
+						<!--<Column>-->
+						<!--	<Text text="Product ID"/>-->
+						<!--</Column>-->
+						<!--<Column>-->
+						<!--	<Text text="Product Name"/>-->
+						<!--</Column>-->
+						<!--<Column>-->
+						<!--	<Text text="Category ID"/>-->
+						<!--</Column>-->
+						<!--<Column>-->
+						<!--	<Text text="Units in Stock"/>-->
+						<!--</Column>-->
+						<!--</columns>-->
+						<!--<items>-->
+						<!--	<ColumnListItem type="Navigation">-->
+						<!--<cells>-->
+						<!--	<Text text="{oModel>ProductID}"/>-->
+						<!--	<Text text="{oModel>ProductName}"/>-->
+						<!--	<Text text="{oModel>CategoryID}"/>-->
+						<!--	<Text text="{oModel>UnitsInStock}"/>-->
+						<!--</cells>-->
+						<!--	</ColumnListItem>-->
+						<!--</items>-->
+					<!--</Table>-->
+				</IconTabFilter>
+				<IconTabFilter id="tableHistory_tab" text="History" key="keyhistory">
+					<!--you can add your fragment here -->
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+	</Panel>
+	<!--</content>-->
+	<!--</Page>-->
+	<!--<App>-->
+	<!--	<pages>-->
+	<!--		<Page title="Hello Products Page">-->
+	<!--			<content></content>-->
+	<!--		</Page>-->
+	<!--	</pages>-->
+	<!--</App>-->
+</mvc:View>

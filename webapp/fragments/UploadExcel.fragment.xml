@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout" xmlns:main="sap.ui.webc.main" xmlns:u="sap.ui.unified" controllerName="com.vodafone.MyProject.controller.Detail">
+	<Dialog id="oDialogExcelUploader" title="Upload Excel ">
+		<l:VerticalLayout>
+			<l:content>
+				<f:SimpleForm id="SimpleFormDisplay354" editable="false" layout="ResponsiveGridLayout" singleContainerFullSize="true">
+					<f:content>
+						<Text id="selectedFileName" text="Press on the browse button "></Text>
+					</f:content>
+				</f:SimpleForm>
+			</l:content>
+			<Bar>
+				<contentLeft>
+					<u:FileUploader id="FileUploaderId" sameFilenameAllowed="true" iconOnly="false" buttonOnly="true" fileType="XLSX,xlsx"
+						icon="sap-icon://upload" iconFirst="true" style="Emphasized" change="onUpload" enabled="true"/>
+				</contentLeft>
+				<contentRight>
+					<Button icon="sap-icon://add" id="oButtonAddColumns" tooltip="Press to view the data" press="addColumns" enabled="false"/>
+					<Button icon="sap-icon://cancel" id="oButtonCancelColumns" tooltip="Use in case you don't want to view the data" press="cancelColumns"
+						enabled="false"/>
+				</contentRight>
+			</Bar>
+		</l:VerticalLayout>
+	</Dialog>
+</core:FragmentDefinition>

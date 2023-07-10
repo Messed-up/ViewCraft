@@ -1,0 +1,36 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:main="sap.ui.webc.main" 
+	class="sapUiSizeCompact"
+	id="oFragmentDialog">
+	<Dialog id="oDialogProductDetails" title="Product details">
+		<l:VerticalLayout>
+			<l:content>
+			<f:SimpleForm id="SimpleFormDisplay354"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			singleContainerFullSize="true" >
+			<f:content>
+				<Label text="Name" />
+				<Text id="nameText" text="{SupplierName}" />
+				<Label text="Street/No." />
+				<Text text="{Street} {HouseNumber}" />
+				<Label text="ZIP Code/City" />
+				<Text text="{ZIPCode} {City}" />
+				<Label text="Country" />
+				<Text id="countryText" text="{Country}" />
+			</f:content>
+		</f:SimpleForm>
+			</l:content>
+			<HBox>
+				<OverflowToolbar>
+					<ToolbarSpacer/>
+					<Button text="Ok" press="onOk"/>
+				</OverflowToolbar>
+			</HBox>
+		</l:VerticalLayout>
+	</Dialog>
+</core:FragmentDefinition>

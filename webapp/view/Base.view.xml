@@ -1,0 +1,24 @@
+<mvc:View controllerName="com.vodafone.MyProject.controller.Base" xmlns:l = "sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App>
+			<Page id="View1">
+				<IconTabBar id="idIconTabBarNoIcons" select="icontab" class="mainTabBar">
+					<items>
+						<IconTabFilter id="idTabDashboard" key = "dashboard" text="Dashboard"/>
+						<IconTabFilter id="idTabProducts" key = "products" text="My Products"/>
+						<IconTabFilter id="idTabDynamictable" key = "dynamic" text="Dynamic"/>
+					</items>
+				</IconTabBar>
+				<ScrollContainer id="app" vertical="true" horizontal="false" height="600px">
+					<content></content>
+				</ScrollContainer>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer width="45%"/>
+						<Text text = "Ankit's Project" id="year"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</App>
+	</Shell>
+</mvc:View>

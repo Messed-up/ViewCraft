@@ -1,0 +1,28 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:ui="sap.ui.table"
+	controllerName="com.vodafone.MyProject.controller.dynamic" xmlns:html="http://www.w3.org/1999/xhtml">
+	<FlexBox id="HistbannerBox" height="8px" alignItems="Center" justifyContent="Center" class="BannerBox">
+		<items>
+			<Title id="banner" textAlign="Center" text="DynamicPage"/>
+		</items>
+	</FlexBox>
+	<ScrollContainer>
+		<ui:Table id="reOrderTable">
+			<ui:extension>
+				<OverflowToolbar style="Clear">
+					<ToolbarSpacer/>
+					<Button icon="sap-icon://add" tooltip="Press to view the data" press="addColumns"/>
+				</OverflowToolbar>
+			</ui:extension>
+		</ui:Table>
+	</ScrollContainer>
+	<ScrollContainer id="app" vertical="true" horizontal="false" height="600px">
+		<content></content>
+	</ScrollContainer>
+	<!--<App>-->
+	<!--	<pages>-->
+	<!--		<Page title="Title">-->
+	<!--			<content></content>-->
+	<!--		</Page>-->
+	<!--	</pages>-->
+	<!--</App>-->
+</mvc:View>

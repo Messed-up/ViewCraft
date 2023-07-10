@@ -1,0 +1,28 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	controllerName="com.vodafone.MyProject.controller.Detail">
+	<ViewSettingsDialog id="settingsDialog" confirm="handleFilterDialogConfirm">
+		<filterItems>
+			<ViewSettingsFilterItem text="Product ID" items="{path: 'FilterValue>/ProductID'}" key="ProductID">
+				<items>
+					<ViewSettingsItem text="{FilterValue>ProductID}" key="{FilterValue>ProductID}"/>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem text="Product Name" items="{path :'FilterValue>/ProductName'}" key="ProductName">
+				<items>
+					<ViewSettingsItem text="{FilterValue>ProductName}" key="{FilterValue>ProductName}"/>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem text="Category ID" items="{path :'FilterValue>/CategoryID'}" key="CategoryID">
+				<items>
+					<ViewSettingsItem text="{FilterValue>CategoryID}" key="{FilterValue>CategoryID}"/>
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem text="Units in Stock" items="{path :'FilterValue>/UnitsInStock'}" key="UnitsInStock">
+				<items>
+					<ViewSettingsItem text="{FilterValue>UnitsInStock}" key="{FilterValue>UnitsInStock}"/>
+				</items>
+			</ViewSettingsFilterItem>
+			
+		</filterItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

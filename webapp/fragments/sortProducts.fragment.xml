@@ -1,0 +1,41 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:main="sap.ui.webc.main" 
+	class="sapUiSizeCompact"
+	id="oFragmentDialog">
+	<!--<Dialog id="oDialogSort" title="Sort Products">-->
+	<!--	<l:VerticalLayout>-->
+	<!--		<l:content>-->
+	<!--			<RadioButtonGroup id="rbgSortOrder">-->
+	<!--		<RadioButton text="Asscending" />-->
+	<!--		<RadioButton text="Descending" />-->
+	<!--	</RadioButtonGroup>-->
+	<!--	<RadioButtonGroup id="rbgSortCategory">-->
+	<!--		<RadioButton text="Product ID" />-->
+	<!--		<RadioButton text="Product Name" />-->
+	<!--		<RadioButton text="Category ID" />-->
+	<!--		<RadioButton text="Units in" />-->
+	<!--	</RadioButtonGroup>-->
+	<!--	</l:content>-->
+	<!--		<HBox>-->
+	<!--			<OverflowToolbar>-->
+	<!--				<Button text="Sort" type="Accept" press="onSort"/>-->
+	<!--				<ToolbarSpacer/>-->
+	<!--				<Button text="Cancel" type="Reject" press="onSortCancel"/>-->
+	<!--			</OverflowToolbar>-->
+	<!--		</HBox>-->
+	<!--	</l:VerticalLayout>-->
+	<!--</Dialog>-->
+		<ViewSettingsDialog
+		confirm="handleSortDialogConfirm">
+		<sortItems>
+			<ViewSettingsItem text="Product ID" key="ProductId" selected="true" />
+			<ViewSettingsItem text="Product Name" key="ProductName" />
+			<ViewSettingsItem text="Category ID" key="CategoryID" />
+			<ViewSettingsItem text="Units of stock" key="UnitsInStock" />
+		</sortItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>
